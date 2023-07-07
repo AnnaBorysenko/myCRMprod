@@ -15,14 +15,14 @@
   "buttons": {
     "login": "Логін"
   },
-  "swithLang" : "Зніна мови",
+  "switchLang" : "Зніна мови",
   "menu": "Меню",
   "products": "Товари",
   "tech.cards": "Тех. карти",
   "ingredients": "Інгедієнти",
   "product.categories": "Категоріі товарів",
   "ingredient.categories": "Категоріі інгедієнтів",
-  "swithTheme" : " Зніна теми",
+  "switchTheme" : " Зніна теми",
   "settings":"Налаштування",
   "reports":"Звіти",
   "tryForFree": "Спробуй безкоштовно",
