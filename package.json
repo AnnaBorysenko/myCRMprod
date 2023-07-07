@@ -1,0 +1,52 @@
+{
+  "name": "my-crm",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "generate": "vite-ssg build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.15",
+    "@graphql-codegen/cli": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@vue/apollo-composable": "^4.0.0-beta.5",
+    "@vue/composition-api": "^1.7.1",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-http": "^1.5.17",
+    "apollo-link-rest": "^0.9.0",
+    "element-plus": "^2.3.5",
+    "flowbite": "^1.7.0",
+    "graphql": "^16.7.1",
+    "graphql-tag": "^2.12.6",
+    "vue": "^3.3.4",
+    "vue-apollo": "^3.1.0",
+    "vue-i18n": "^9.2.2",
+    "vue-immer-state": "github:ntrpy/vue-immer-state",
+    "vue-router": "^4.0.3",
+    "vue-zustand": "^0.5.0",
+    "zustand": "^4.3.8"
+  },
+  "devDependencies": {
+    "@graphql-codegen/typescript-vue-apollo": "^3.3.7",
+    "@iconify-json/ep": "^1.1.10",
+    "@types/node": "^20.2.1",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "sass": "^1.62.1",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4",
+    "unocss": "^0.51.13",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.3.8",
+    "vite-ssg": "^0.22.2",
+    "vue-tsc": "^1.6.5"
+  },
+  "license": "MIT"
+}

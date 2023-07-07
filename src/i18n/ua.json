@@ -1,0 +1,33 @@
+{
+  "logo" : "МОЯ ЦРМ",
+  "workspace": "робочий простір",
+  "signIn": "Увійти",
+  "register" : "Регистрація",
+  "title": "Почати роботу!",
+  "space1" : "простір один",
+  "space2" : "простір два",
+  "stock" : "Склад",
+  "addStock" : "списати",
+  "outStock" : "прийняти",
+  "placeholders" : {
+    "textStart": "Привіт  користувач"
+  },
+  "buttons": {
+    "login": "Логін"
+  },
+  "swithLang" : "Зніна мови",
+  "menu": "Меню",
+  "products": "Товари",
+  "tech.cards": "Тех. карти",
+  "ingredients": "Інгедієнти",
+  "product.categories": "Категоріі товарів",
+  "ingredient.categories": "Категоріі інгедієнтів",
+  "swithTheme" : " Зніна теми",
+  "settings":"Налаштування",
+  "reports":"Звіти",
+  "tryForFree": "Спробуй безкоштовно",
+  "dashboard" : "Панель",
+  "sale" : "Акция",
+  "contact" : "Контакти",
+  "home": "Головна"
+}

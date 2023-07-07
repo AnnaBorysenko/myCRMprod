@@ -1,0 +1,34 @@
+{
+  "logo": "MY CRM",
+  "workspace": "Workspace",
+  "signIn": "Sign In",
+  "register": "Register",
+  "title": "Start work!",
+  "space1": "space one",
+  "space2": "space two",
+  "stock": "stock",
+  "addStock": "add to stock",
+  "outStock": "out of stock",
+  "placeholders": {
+    "textStart": "Hello user"
+  },
+  "buttons": {
+    "login": "Log in"
+  },
+  "swithLang": "Swith lang",
+  "menu": "Menu",
+  "products": "Products",
+  "tech.cards": "Tech.cards",
+  "ingredients": "Ingredients",
+  "product.categories": "Product categories",
+  "ingredient.categories": "Ingredient categories",
+  "swithTheme": "Swith theme",
+  "settings": "Settings",
+  "reports":"Reports",
+  "tryForFree": "Спробуй безкоштовно Try for free",
+  "dashboard" : "Dashboard",
+  "sale" : "Sale",
+  "contact" : "Contact",
+  "home": "Home"
+}
+
