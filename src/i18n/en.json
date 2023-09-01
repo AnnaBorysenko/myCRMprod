@@ -13,7 +13,11 @@
     "textStart": "Hello user"
   },
   "buttons": {
-    "login": "Log in"
+    "login": "Log in",
+    "set-up": "Set up",
+    "archive": "Archive",
+    "save": "Save",
+    "close" : "Close"
   },
   "switchLang": "Switch lang",
   "menu": "Menu",
@@ -29,6 +33,23 @@
   "dashboard" : "Dashboard",
   "sale" : "Sale",
   "contact" : "Contact",
-  "home": "Home"
+  "home": "Home",
+  "residuals": "Residuals",
+  "write-off": "Write-off",
+  "supply": "Supply",
+  "packaging": "Packaging",
+  "inventories": "Inventories",
+  "action.button": "Action",
+  "activate.button": "Activate Product",
+  "inactive.button": "Inactive Product",
+  "delete.button": "Delete Product",
+  "search": "Search",
+  "name": "Name",
+  "count": "Count",
+  "price": "Price",
+  "edit.product": "Edit product",
+  "status" : "Status",
+  "active": "Active",
+  "inactive": "Inactive"
 }
 

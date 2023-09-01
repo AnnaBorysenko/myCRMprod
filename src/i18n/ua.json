@@ -13,7 +13,12 @@
     "textStart": "Привіт  користувач"
   },
   "buttons": {
-    "login": "Логін"
+    "login": "Логін",
+    "set-up": "Налаштувати",
+    "archive": "Архивувати",
+    "save": "Зберігти",
+    "close" : "Закрити"
+
   },
   "switchLang" : "Зніна мови",
   "menu": "Меню",
@@ -29,5 +34,24 @@
   "dashboard" : "Панель",
   "sale" : "Акция",
   "contact" : "Контакти",
-  "home": "Головна"
+  "home": "Головна",
+  "residuals": "Залишки",
+  "write-off": "Списання",
+  "supply": "Постачання",
+  "packaging": "Фасування",
+  "inventories": "Інвентаризаціі",
+  "action.button": "Дій",
+  "activate.button": "Активувний продукт",
+  "inactive.button": "Неактивний продукт",
+  "delete.button": "Видалити продукт",
+  "search": "Пошук",
+  "name": "Назва",
+  "count": "Кількість",
+  "price": "Ціна",
+  "edit.product": "Налаштувати",
+  "status" : "Статус",
+  "active": "Активний",
+  "inactive": "Неактивний"
+
+
 }

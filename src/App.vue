@@ -1,15 +1,13 @@
 <template>
   <el-config-provider namespace="ep">
-    <BaseHeader/>
-    <div class="flex main-container">
-      <BaseSide/>
-      <div w="full" py="4">
-        <router-view/>
+    <BaseHeader class="fixed w-100% "/>
+    <div class="h-screen flex pt-100px main-container dark:bg-gray-900 dark:text-gray-400">
+      <div class="w-1/5">
+        <BaseSide />
       </div>
+        <router-view class="w-3/4 " py="4"/>
     </div>
-
   </el-config-provider>
-
 </template>
 
 <style>
@@ -25,6 +23,5 @@
 
 <script setup>
 import {useI18n} from "vue-i18n";
-
 
 </script>
