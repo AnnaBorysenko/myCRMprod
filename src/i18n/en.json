@@ -50,6 +50,9 @@
   "edit.product": "Edit product",
   "status" : "Status",
   "active": "Active",
-  "inactive": "Inactive"
+  "inactive": "Inactive",
+  "change.description" : "Change description",
+  "description": "Description",
+  "add.new.product" : "Add new product"
 }
 

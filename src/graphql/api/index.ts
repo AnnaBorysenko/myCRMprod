@@ -7,6 +7,7 @@ import {
 } from "@apollo/client/core";
 
 
+const token = 'yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MzA5MDc1YS04ZGRjLTRjN2ItOWVjZC1kMzQ1ZjY1NGEyNmUiLCJlbWFpbCI6ImFubmF0ZXN0QGdtYWlsLmNvbSIsIm5hbWUiOiJBbm4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2OTU3MjQyNjQsImV4cCI6MTY5NTcyNzg2NH0.PsQd15sIio_k5tWSiaNbYExm0QIdMpXjjd_el4CceMk'
 
 const additiveLink = from([
     new ApolloLink((operation, forward) => {
@@ -18,8 +19,10 @@ const additiveLink = from([
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Credentials': 'true',
                 'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
-                'Access-Control-Allow-Headers': 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+                'Access-Control-Allow-Headers': 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
+                authorization: `Bearer ${token}`
             }
+
         }));
         return forward(operation); // Go to the next link in the chain. Similar to `next` in Express.js middleware.
     }),
@@ -32,3 +35,5 @@ export const apolloClient = new ApolloClient({
     link: additiveLink,
     cache,
 });
+
+

@@ -56,14 +56,17 @@ declare module '@vue/runtime-core' {
     TheHomePage: typeof import('./components/pages/TheHomePage.vue')['default']
     TheLogin: typeof import('./components/TheLogin.vue')['default']
     TheModal: typeof import('./components/pages/TheModal.vue')['default']
+    TheModalCreate: typeof import('./components/pages/TheModalCreate.vue')['default']
     TheNavbar: typeof import('./components/layouts/TheNavbar.vue')['default']
     TheProduct: typeof import('./components/TheProduct.vue')['default']
-    TheProductForm: typeof import('./components/TheProductForm.vue')['default']
+    TheProductForm: typeof import('./components/pages/TheProductForm.vue')['default']
+    TheProductFormCreate: typeof import('./components/pages/TheProductFormCreate.vue')['default']
     TheProductMainForm: typeof import('./components/pages/TheProductMainForm.vue')['default']
     TheProductMainPage: typeof import('./components/pages/TheProductMainPage.vue')['default']
     TheProductPage: typeof import('./components/pages/TheProductPage.vue')['default']
     TheProductPrewPage: typeof import('./components/pages/TheProductPrewPage.vue')['default']
     TheProductsPage: typeof import('./components/pages/TheProductsPage.vue')['default']
+    TheProductView: typeof import('./components/pages/TheProductView.vue')['default']
     TheRegisterPage: typeof import('./components/pages/TheRegisterPage.vue')['default']
   }
 }

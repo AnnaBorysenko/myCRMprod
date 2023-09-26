@@ -5,7 +5,9 @@
       <div class="w-1/5">
         <BaseSide />
       </div>
-        <router-view class="w-3/4 " py="4"/>
+      <div class="w-3/4">
+        <router-view />
+      </div>
     </div>
   </el-config-provider>
 </template>

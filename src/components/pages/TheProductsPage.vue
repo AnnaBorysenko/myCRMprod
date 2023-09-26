@@ -1,20 +1,24 @@
-
 <script setup>
-import { useQuery } from "@vue/apollo-composable";
-
-
 import {GET_PRODUCTS} from "~/graphql/reqest/getProducts";
+import {useQuery} from '@vue/apollo-composable'
+import {computed, onMounted} from "vue"
+import {initFlowbite} from "flowbite";
 
-const { result}  = useQuery(GET_PRODUCTS);
+const {result} = useQuery(GET_PRODUCTS)
+const products = computed(() => result.value?.products.items ?? [])
 
-console.log('res', result)
+onMounted(() => {
+  initFlowbite();
+})
+
 
 </script>
 
 <template>
   <div class="p-4 ">
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <div class="flex items-center justify-between border-1 border-t-gray-150 p-2 bg-white dark:border-gray-700 dark:bg-gray-900">
+      <div
+          class="flex items-center justify-between border-1 border-t-gray-150 p-2 bg-white dark:border-gray-700 dark:bg-gray-900">
         <div>
           <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction"
                   class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
@@ -33,7 +37,7 @@ console.log('res', result)
             <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownActionButton">
               <li>
                 <span class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                  {{$t('activate.button') }}</span>
+                  {{ $t('activate.button') }}</span>
               </li>
               <li>
                 <span class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{
@@ -50,7 +54,7 @@ console.log('res', result)
           </div>
         </div>
         <label for="table-search" class="sr-only">{{ $t('search') }}</label>
-        <div class="relative">
+        <div class="relative z-0">
           <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                  fill="none" viewBox="0 0 20 20">
@@ -61,6 +65,37 @@ console.log('res', result)
           <input type="text" id="table-search-users"
                  class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                  :placeholder="$t('search')">
+        </div>
+      </div>
+      <div class="flex p-4 text-left">
+        <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button">
+          {{ $t('add.new.product') }}
+        </button>
+        <div id="popup-modal" tabindex="-1"
+             class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative w-full max-w-md max-h-full">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <button type="button"
+                      class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                      data-modal-hide="popup-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                     viewBox="0 0 14 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+              </button>
+              <div class="p-6 text-center">
+                <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">Create product</h3>
+<!--                <TheProductForm />-->
+                <button data-modal-hide="popup-modal" type="button"
+                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                  {{ $t('buttons.close') }}
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -85,7 +120,7 @@ console.log('res', result)
           <th scope="col" class="px-6 py-3">
             {{ $t('status') }}
           </th>
-          <th scope="col" class="pl-76px py-3">
+          <th scope="col" class="px-6 py-3">
             {{ $t('action.button') }}
           </th>
           <th scope="col" class="px-6 py-3">
@@ -94,10 +129,10 @@ console.log('res', result)
         </thead>
         <tbody>
         <TheProductPrewPage
-           v-for="product in  result?.products?.items"
+            v-for="product in products"
             :key="product.id"
-            :cake="product">
-       </TheProductPrewPage>
+            :product="product">
+        </TheProductPrewPage>
         </tbody>
       </table>
     </div>

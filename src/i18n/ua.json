@@ -51,7 +51,10 @@
   "edit.product": "Налаштувати",
   "status" : "Статус",
   "active": "Активний",
-  "inactive": "Неактивний"
+  "inactive": "Неактивний",
+  "change.description" : "Змінити опис",
+  "description": "Опис",
+  "add.new.product" : "Додати новий товар"
 
 
 }

@@ -13,6 +13,7 @@
     "@apollo/client": "^3.7.15",
     "@graphql-codegen/cli": "^4.0.1",
     "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@rollup/plugin-graphql": "^2.0.3",
     "@truffle/hdwallet-provider": "^1.0.41-1",
     "@vue/apollo-composable": "^4.0.0-beta.5",
     "@vue/composition-api": "^1.7.1",
@@ -28,12 +29,14 @@
     "graphql": "^16.7.1",
     "graphql-tag": "^2.12.6",
     "pinia": "^2.1.6",
+    "vee-validate": "^4.11.3",
     "vue": "^3.3.4",
     "vue-apollo": "^3.1.0",
     "vue-i18n": "^9.2.2",
     "vue-immer-state": "github:ntrpy/vue-immer-state",
     "vue-router": "^4.0.3",
     "vue-zustand": "^0.5.0",
+    "yup": "^1.2.0",
     "zustand": "^4.3.8"
   },
   "devDependencies": {
