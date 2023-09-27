@@ -4,16 +4,19 @@ import  {useRoute} from "vue-router"
 import {useQuery} from "@vue/apollo-composable";
 import {computed} from "vue";
 import { onMounted } from 'vue'
-import { initFlowbite } from 'flowbite'
+import {initModals} from 'flowbite'
 
+// initialize components based on data attribute selectors
 onMounted(() => {
-  initFlowbite();
+  initModals();
 })
 
 const route = useRoute()
-const {result } = useQuery(GET_PRODUCT, {id: route.params.id})
-const product = computed(() => result.value?.product ?? [])
-console.log("prod,", product)
+const { result, loading } = useQuery(GET_PRODUCT, {id: route.params.id})
+const product = computed(() => result.value?.product ?? {})
+
+console.log("prodView,", product)
+
 
 </script>
 <template>
@@ -41,9 +44,8 @@ console.log("prod,", product)
               </svg>
             </button>
             <div class="p-6 text-center">
-
               <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">Update product</h3>
-              <TheProductForm :product="product"/>
+              <div v-if="!loading"><TheProductForm :product="product"/></div>
               <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">{{ $t('buttons.close') }}</button>
             </div>
           </div>

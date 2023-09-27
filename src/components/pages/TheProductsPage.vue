@@ -2,13 +2,13 @@
 import {GET_PRODUCTS} from "~/graphql/reqest/getProducts";
 import {useQuery} from '@vue/apollo-composable'
 import {computed, onMounted} from "vue"
-import {initFlowbite} from "flowbite";
+import { initModals} from "flowbite";
 
 const {result} = useQuery(GET_PRODUCTS)
 const products = computed(() => result.value?.products.items ?? [])
 
 onMounted(() => {
-  initFlowbite();
+  initModals();
 })
 
 

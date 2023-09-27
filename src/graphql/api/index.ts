@@ -7,7 +7,7 @@ import {
 } from "@apollo/client/core";
 
 
-const token = 'yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MzA5MDc1YS04ZGRjLTRjN2ItOWVjZC1kMzQ1ZjY1NGEyNmUiLCJlbWFpbCI6ImFubmF0ZXN0QGdtYWlsLmNvbSIsIm5hbWUiOiJBbm4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2OTU3MjQyNjQsImV4cCI6MTY5NTcyNzg2NH0.PsQd15sIio_k5tWSiaNbYExm0QIdMpXjjd_el4CceMk'
+const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MzA5MDc1YS04ZGRjLTRjN2ItOWVjZC1kMzQ1ZjY1NGEyNmUiLCJlbWFpbCI6ImFubmF0ZXN0QGdtYWlsLmNvbSIsIm5hbWUiOiJBbm4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2OTU4MTA3MjksImV4cCI6MTY5NTgxNDMyOX0.iZr0XGRNOFJY2CikFg478g_yljr1iPRwCir4pt2OVqs'
 
 const additiveLink = from([
     new ApolloLink((operation, forward) => {
